@@ -2,6 +2,7 @@
 #define MAINDIALOG_H
 
 #include <QWidget>
+#include <QPainter>
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -17,6 +18,9 @@ class MainDialog : public QWidget
 public:
     MainDialog(QWidget *parent = nullptr);
     ~MainDialog(void);
+
+protected:
+    void paintEvent(QPaintEvent *);
 
 private:
     Ui::MainDialog *ui;
