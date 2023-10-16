@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QDialog>
 #include <QPainter>
+#include <QMessageBox>
+#include <QDebug>
 
 namespace Ui
 {
@@ -20,6 +22,9 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *);
+
+private slots:
+    void on_ButtonLog_clicked(void);
 
 private:
     Ui::LogDialog *ui;

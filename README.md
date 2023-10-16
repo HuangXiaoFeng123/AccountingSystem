@@ -1,5 +1,27 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.03
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231016
+*****************************************************************************
+3.Design log in UI and add log in function.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+        modified:   AccountingSystem/logdialog.cpp
+        modified:   AccountingSystem/logdialog.h
+        modified:   AccountingSystem/logdialog.ui
+        modified:   AccountingSystem/main.cpp
+        modified:   AccountingSystem/maindialog.cpp
+
+*****************************************************************************
 Qt version  : 0.02
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
