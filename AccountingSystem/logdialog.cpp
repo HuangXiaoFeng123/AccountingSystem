@@ -8,7 +8,18 @@ LogDialog::LogDialog(QWidget *parent) :QDialog(parent),ui(new Ui::LogDialog)
     //绘画头像
     ui->Piclabel->setScaledContents(true);
     ui->Piclabel->setPixmap(QPixmap(":/image/log_user.jpg"));
+    //密码格式
     ui->PassWordlineEdit->setEchoMode(QLineEdit::Password);
+    //id文件读取
+    QFile file("../IDStringList.txt");
+    bool open_OK=file.open(QIODevice::ReadOnly);
+    if(open_OK==true)
+    {
+        idList<<QString(file.readLine());
+        //智能提示
+        QCompleter *completer=new QCompleter(idList);
+        ui->IDlineEdit->setCompleter(completer);
+    }
 }
 
 LogDialog::~LogDialog(void)
@@ -25,14 +36,18 @@ void LogDialog::paintEvent(QPaintEvent *)
 }
 
 void LogDialog::on_ButtonLog_clicked(void)
-{
-    if((ui->IDcomboBox->currentText()==QString("123456"))&&(ui->PassWordlineEdit->text()==QString("666666")))
+{  
+    QFile file("../IDStringList.txt");
+    file.open(QIODevice::WriteOnly);
+    //登陆判断(目前只支持一个账号功能)
+    if((ui->IDlineEdit->text()==QString("123456"))&&(ui->PassWordlineEdit->text()==QString("666666")))
     {
+        file.write(ui->IDlineEdit->text().toUtf8());
         accept();
     }
     else
     {
-        if(ui->IDcomboBox->currentText()!=QString("123456"))
+        if(ui->IDlineEdit->text()!=QString("123456"))
         {
             QMessageBox::warning(this,"error","账号不存在");
         }

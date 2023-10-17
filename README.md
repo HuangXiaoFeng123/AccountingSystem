@@ -1,5 +1,26 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.04
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231017
+*****************************************************************************
+4.Add ID preserve function.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+ 	modified:   AccountingSystem/logdialog.cpp
+        modified:   AccountingSystem/logdialog.h
+        modified:   AccountingSystem/logdialog.ui
+        modified:   AccountingSystem/maindialog.cpp
+
+*****************************************************************************
 Qt version  : 0.03
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0

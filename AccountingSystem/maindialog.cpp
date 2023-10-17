@@ -4,7 +4,7 @@
 MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
-    setWindowTitle("Accounting System V0.03");
+    setWindowTitle("Accounting System V0.04");
 }
 
 MainDialog::~MainDialog(void)

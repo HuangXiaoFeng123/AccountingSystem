@@ -5,6 +5,8 @@
 #include <QDialog>
 #include <QPainter>
 #include <QMessageBox>
+#include <QCompleter>
+#include <QFile>
 #include <QDebug>
 
 namespace Ui
@@ -28,6 +30,7 @@ private slots:
 
 private:
     Ui::LogDialog *ui;
+    QStringList idList;
 };
 
 #endif // LOGDIALOG_H

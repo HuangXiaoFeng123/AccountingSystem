@@ -100,15 +100,12 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="IDcomboBox">
+        <widget class="QLineEdit" name="IDlineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
-         </property>
-         <property name="editable">
-          <bool>true</bool>
          </property>
         </widget>
        </item>

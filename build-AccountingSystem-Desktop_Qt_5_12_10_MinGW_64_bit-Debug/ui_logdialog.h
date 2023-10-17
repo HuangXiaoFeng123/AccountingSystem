@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -35,7 +34,7 @@ public:
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
-    QComboBox *IDcomboBox;
+    QLineEdit *IDlineEdit;
     QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_3;
@@ -100,13 +99,12 @@ public:
 
         horizontalLayout_3->addWidget(label_2);
 
-        IDcomboBox = new QComboBox(LogDialog);
-        IDcomboBox->setObjectName(QString::fromUtf8("IDcomboBox"));
-        sizePolicy.setHeightForWidth(IDcomboBox->sizePolicy().hasHeightForWidth());
-        IDcomboBox->setSizePolicy(sizePolicy);
-        IDcomboBox->setEditable(true);
+        IDlineEdit = new QLineEdit(LogDialog);
+        IDlineEdit->setObjectName(QString::fromUtf8("IDlineEdit"));
+        sizePolicy.setHeightForWidth(IDlineEdit->sizePolicy().hasHeightForWidth());
+        IDlineEdit->setSizePolicy(sizePolicy);
 
-        horizontalLayout_3->addWidget(IDcomboBox);
+        horizontalLayout_3->addWidget(IDlineEdit);
 
         horizontalLayout_3->setStretch(0, 1);
         horizontalLayout_3->setStretch(1, 4);
