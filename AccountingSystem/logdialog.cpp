@@ -12,13 +12,14 @@ LogDialog::LogDialog(QWidget *parent) :QDialog(parent),ui(new Ui::LogDialog)
     ui->PassWordlineEdit->setEchoMode(QLineEdit::Password);
     //id文件读取
     QFile file("../IDStringList.txt");
-    bool open_OK=file.open(QIODevice::ReadOnly);
-    if(open_OK==true)
+    bool openRead_OK=file.open(QIODevice::ReadOnly);
+    if(openRead_OK==true)
     {
         idList<<QString(file.readLine());
         //智能提示
         QCompleter *completer=new QCompleter(idList);
         ui->IDlineEdit->setCompleter(completer);
+        file.close();
     }
 }
 
@@ -38,11 +39,15 @@ void LogDialog::paintEvent(QPaintEvent *)
 void LogDialog::on_ButtonLog_clicked(void)
 {  
     QFile file("../IDStringList.txt");
-    file.open(QIODevice::WriteOnly);
+    bool openWrite_OK=file.open(QIODevice::WriteOnly);
     //登陆判断(目前只支持一个账号功能)
     if((ui->IDlineEdit->text()==QString("123456"))&&(ui->PassWordlineEdit->text()==QString("666666")))
     {
-        file.write(ui->IDlineEdit->text().toUtf8());
+        if(openWrite_OK==true)
+        {
+            file.write(ui->IDlineEdit->text().toUtf8());
+            file.close();
+        }
         accept();
     }
     else
