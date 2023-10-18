@@ -11,6 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTableView>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -18,12 +25,138 @@ QT_BEGIN_NAMESPACE
 class Ui_MainDialog
 {
 public:
+    QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout_2;
+    QTableView *tableView;
+    QSpacerItem *verticalSpacer_2;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *ButtonAdd;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *ButtonDel;
+    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_5;
+    QPushButton *ButtonSure;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *ButtonCancel;
+    QSpacerItem *horizontalSpacer_6;
 
     void setupUi(QWidget *MainDialog)
     {
         if (MainDialog->objectName().isEmpty())
             MainDialog->setObjectName(QString::fromUtf8("MainDialog"));
         MainDialog->resize(800, 600);
+        gridLayout = new QGridLayout(MainDialog);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        tableView = new QTableView(MainDialog);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
+        tableView->horizontalHeader()->setDefaultSectionSize(180);
+
+        verticalLayout_2->addWidget(tableView);
+
+        verticalSpacer_2 = new QSpacerItem(20, 18, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_2);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(-1, 0, -1, -1);
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+        ButtonAdd = new QPushButton(MainDialog);
+        ButtonAdd->setObjectName(QString::fromUtf8("ButtonAdd"));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(ButtonAdd->sizePolicy().hasHeightForWidth());
+        ButtonAdd->setSizePolicy(sizePolicy);
+
+        horizontalLayout->addWidget(ButtonAdd);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        ButtonDel = new QPushButton(MainDialog);
+        ButtonDel->setObjectName(QString::fromUtf8("ButtonDel"));
+        sizePolicy.setHeightForWidth(ButtonDel->sizePolicy().hasHeightForWidth());
+        ButtonDel->setSizePolicy(sizePolicy);
+
+        horizontalLayout->addWidget(ButtonDel);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_4);
+
+        horizontalLayout->setStretch(0, 1);
+        horizontalLayout->setStretch(1, 1);
+        horizontalLayout->setStretch(2, 2);
+        horizontalLayout->setStretch(3, 1);
+        horizontalLayout->setStretch(4, 1);
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_5);
+
+        ButtonSure = new QPushButton(MainDialog);
+        ButtonSure->setObjectName(QString::fromUtf8("ButtonSure"));
+        sizePolicy.setHeightForWidth(ButtonSure->sizePolicy().hasHeightForWidth());
+        ButtonSure->setSizePolicy(sizePolicy);
+
+        horizontalLayout_2->addWidget(ButtonSure);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_2);
+
+        ButtonCancel = new QPushButton(MainDialog);
+        ButtonCancel->setObjectName(QString::fromUtf8("ButtonCancel"));
+        sizePolicy.setHeightForWidth(ButtonCancel->sizePolicy().hasHeightForWidth());
+        ButtonCancel->setSizePolicy(sizePolicy);
+
+        horizontalLayout_2->addWidget(ButtonCancel);
+
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_6);
+
+        horizontalLayout_2->setStretch(0, 1);
+        horizontalLayout_2->setStretch(1, 1);
+        horizontalLayout_2->setStretch(2, 2);
+        horizontalLayout_2->setStretch(3, 1);
+        horizontalLayout_2->setStretch(4, 1);
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        verticalLayout->setStretch(0, 1);
+        verticalLayout->setStretch(1, 2);
+        verticalLayout->setStretch(2, 1);
+
+        verticalLayout_2->addLayout(verticalLayout);
+
+        verticalLayout_2->setStretch(0, 6);
+        verticalLayout_2->setStretch(1, 1);
+        verticalLayout_2->setStretch(2, 3);
+
+        gridLayout->addLayout(verticalLayout_2, 0, 0, 1, 1);
+
 
         retranslateUi(MainDialog);
 
@@ -33,6 +166,10 @@ public:
     void retranslateUi(QWidget *MainDialog)
     {
         MainDialog->setWindowTitle(QApplication::translate("MainDialog", "MainDialog", nullptr));
+        ButtonAdd->setText(QApplication::translate("MainDialog", "\345\242\236\345\212\240", nullptr));
+        ButtonDel->setText(QApplication::translate("MainDialog", "\345\210\240\351\231\244", nullptr));
+        ButtonSure->setText(QApplication::translate("MainDialog", "\347\241\256\345\256\232", nullptr));
+        ButtonCancel->setText(QApplication::translate("MainDialog", "\345\217\226\346\266\210", nullptr));
     } // retranslateUi
 
 };

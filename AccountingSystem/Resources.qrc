@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>image/log_background.jpg</file>
         <file>image/log_user.jpg</file>
+        <file>image/main_background.jpg</file>
     </qresource>
 </RCC>

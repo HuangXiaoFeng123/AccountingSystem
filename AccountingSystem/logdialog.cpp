@@ -54,11 +54,11 @@ void LogDialog::on_ButtonLog_clicked(void)
     {
         if(ui->IDlineEdit->text()!=QString("123456"))
         {
-            QMessageBox::warning(this,"error","账号不存在");
+            QMessageBox::warning(this,"warning","账号不存在");
         }
         else if(ui->PassWordlineEdit->text()!=QString("666666"))
         {
-            QMessageBox::warning(this,"error","密码错误");
+            QMessageBox::warning(this,"warning","密码错误");
         }
     }
 }

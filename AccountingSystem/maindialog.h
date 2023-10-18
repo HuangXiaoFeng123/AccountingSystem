@@ -3,6 +3,11 @@
 
 #include <QWidget>
 #include <QPainter>
+#include <QSqlDatabase>
+#include <QMessageBox>
+#include <QSqlError>
+#include <QSqlTableModel>
+#include <QSqlQuery>
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -24,5 +29,6 @@ protected:
 
 private:
     Ui::MainDialog *ui;
+    QSqlTableModel *model;
 };
 #endif // MAINDIALOG_H

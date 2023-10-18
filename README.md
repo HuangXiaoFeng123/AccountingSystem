@@ -1,5 +1,29 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.06
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231018
+*****************************************************************************
+6.Design mainDialog UI and create mysqlite.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+ 	modified:   AccountingSystem/AccountingSystem.pro
+        modified:   AccountingSystem/Resources.qrc
+        new file:   AccountingSystem/image/main_background.jpg
+        modified:   AccountingSystem/logdialog.cpp
+        modified:   AccountingSystem/maindialog.cpp
+        modified:   AccountingSystem/maindialog.h
+        modified:   AccountingSystem/maindialog.ui
+
+*****************************************************************************
 Qt version  : 0.05
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
