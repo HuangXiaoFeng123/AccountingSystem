@@ -15,7 +15,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="6,1,3">
+    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="13,2,1">
      <item>
       <widget class="QTableView" name="tableView">
        <attribute name="horizontalHeaderDefaultSectionSize">
@@ -24,20 +24,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="verticalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>18</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout" stretch="1,2,1">
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="2,2">
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,2,1,1">
          <property name="topMargin">
@@ -111,19 +98,6 @@
         </layout>
        </item>
        <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1,2,1,1">
          <item>
           <spacer name="horizontalSpacer_5">
@@ -191,6 +165,48 @@
           </spacer>
          </item>
         </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="4,1">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="placeholderText">
+          <string>请输入查找的日期</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ButtonSearch">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>查找</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>

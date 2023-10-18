@@ -14,6 +14,7 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableView>
@@ -28,7 +29,6 @@ public:
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout_2;
     QTableView *tableView;
-    QSpacerItem *verticalSpacer_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_3;
@@ -36,13 +36,15 @@ public:
     QSpacerItem *horizontalSpacer;
     QPushButton *ButtonDel;
     QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *ButtonSure;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *ButtonCancel;
     QSpacerItem *horizontalSpacer_6;
+    QHBoxLayout *horizontalLayout_3;
+    QLineEdit *lineEdit;
+    QPushButton *ButtonSearch;
 
     void setupUi(QWidget *MainDialog)
     {
@@ -58,10 +60,6 @@ public:
         tableView->horizontalHeader()->setDefaultSectionSize(180);
 
         verticalLayout_2->addWidget(tableView);
-
-        verticalSpacer_2 = new QSpacerItem(20, 18, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_2->addItem(verticalSpacer_2);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
@@ -105,10 +103,6 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -145,15 +139,43 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_2);
 
-        verticalLayout->setStretch(0, 1);
+        verticalLayout->setStretch(0, 2);
         verticalLayout->setStretch(1, 2);
-        verticalLayout->setStretch(2, 1);
 
         verticalLayout_2->addLayout(verticalLayout);
 
-        verticalLayout_2->setStretch(0, 6);
-        verticalLayout_2->setStretch(1, 1);
-        verticalLayout_2->setStretch(2, 3);
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_3->setContentsMargins(-1, 0, -1, 0);
+        lineEdit = new QLineEdit(MainDialog);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
+        lineEdit->setSizePolicy(sizePolicy1);
+        QFont font;
+        font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
+        font.setPointSize(10);
+        lineEdit->setFont(font);
+
+        horizontalLayout_3->addWidget(lineEdit);
+
+        ButtonSearch = new QPushButton(MainDialog);
+        ButtonSearch->setObjectName(QString::fromUtf8("ButtonSearch"));
+        sizePolicy.setHeightForWidth(ButtonSearch->sizePolicy().hasHeightForWidth());
+        ButtonSearch->setSizePolicy(sizePolicy);
+
+        horizontalLayout_3->addWidget(ButtonSearch);
+
+        horizontalLayout_3->setStretch(0, 4);
+        horizontalLayout_3->setStretch(1, 1);
+
+        verticalLayout_2->addLayout(horizontalLayout_3);
+
+        verticalLayout_2->setStretch(0, 13);
+        verticalLayout_2->setStretch(1, 2);
+        verticalLayout_2->setStretch(2, 1);
 
         gridLayout->addLayout(verticalLayout_2, 0, 0, 1, 1);
 
@@ -170,6 +192,8 @@ public:
         ButtonDel->setText(QApplication::translate("MainDialog", "\345\210\240\351\231\244", nullptr));
         ButtonSure->setText(QApplication::translate("MainDialog", "\347\241\256\345\256\232", nullptr));
         ButtonCancel->setText(QApplication::translate("MainDialog", "\345\217\226\346\266\210", nullptr));
+        lineEdit->setPlaceholderText(QApplication::translate("MainDialog", "\350\257\267\350\276\223\345\205\245\346\237\245\346\211\276\347\232\204\346\227\245\346\234\237", nullptr));
+        ButtonSearch->setText(QApplication::translate("MainDialog", "\346\237\245\346\211\276", nullptr));
     } // retranslateUi
 
 };

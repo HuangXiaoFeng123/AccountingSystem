@@ -1,5 +1,26 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.07
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231018
+*****************************************************************************
+7.Add QSQLITE crud function.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+ 	modified:   AccountingSystem/maindialog.cpp
+        modified:   AccountingSystem/maindialog.h
+        modified:   AccountingSystem/maindialog.ui
+        modified:   account.db
+
+*****************************************************************************
 Qt version  : 0.06
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0

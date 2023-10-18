@@ -8,6 +8,9 @@
 #include <QSqlError>
 #include <QSqlTableModel>
 #include <QSqlQuery>
+#include <QSqlRecord>
+#include <QItemSelectionModel>
+#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -26,6 +29,13 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *);
+
+private slots:
+    void on_ButtonAdd_clicked(void);
+    void on_ButtonSure_clicked(void);
+    void on_ButtonDel_clicked(void);
+    void on_ButtonCancel_clicked(void);
+    void on_ButtonSearch_clicked(void);
 
 private:
     Ui::MainDialog *ui;
