@@ -10,6 +10,7 @@
 #include <QSqlQuery>
 #include <QSqlRecord>
 #include <QItemSelectionModel>
+#include <QCloseEvent>
 #include <QDebug>
 
 QT_BEGIN_NAMESPACE
@@ -29,6 +30,7 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *);
+    void closeEvent(QCloseEvent *);
 
 private slots:
     void on_ButtonAdd_clicked(void);

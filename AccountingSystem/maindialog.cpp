@@ -4,7 +4,7 @@
 MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
-    setWindowTitle("Accounting System V0.07");
+    setWindowTitle("Accounting System V0.08");
     QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("../account.db");
     if(!db.open())
@@ -30,6 +30,20 @@ void MainDialog::paintEvent(QPaintEvent *)
     QPainter mainDialog_P(this);
     QPixmap mainDialog_map(":/image/main_background.jpg");
     mainDialog_P.drawPixmap(0,0,this->width(),this->height(),mainDialog_map);
+}
+
+void MainDialog::closeEvent(QCloseEvent *e)
+{
+    QMessageBox msgBox;
+    int ret=msgBox.question(this,"close",tr("确定退出?"),QMessageBox::Ok|QMessageBox::Cancel);
+    if(ret==QMessageBox::Ok)
+    {
+        e->accept();
+    }
+    else
+    {
+        e->ignore();
+    }
 }
 
 void MainDialog::on_ButtonAdd_clicked(void)

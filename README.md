@@ -1,5 +1,25 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.08
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231019
+*****************************************************************************
+8.Add close event function.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+ 	modified:   AccountingSystem/main.cpp
+        modified:   AccountingSystem/maindialog.cpp
+        modified:   AccountingSystem/maindialog.h
+
+*****************************************************************************
 Qt version  : 0.07
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
