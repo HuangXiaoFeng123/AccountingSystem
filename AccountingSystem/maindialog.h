@@ -11,6 +11,8 @@
 #include <QSqlRecord>
 #include <QItemSelectionModel>
 #include <QCloseEvent>
+#include <QTableWidgetItem>
+#include "noedit.h"
 #include <QDebug>
 
 QT_BEGIN_NAMESPACE

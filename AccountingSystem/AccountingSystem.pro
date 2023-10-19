@@ -11,11 +11,13 @@ CONFIG += c++11
 SOURCES += \
     logdialog.cpp \
     main.cpp \
-    maindialog.cpp
+    maindialog.cpp \
+    noedit.cpp
 
 HEADERS += \
     logdialog.h \
-    maindialog.h
+    maindialog.h \
+    noedit.h
 
 FORMS += \
     logdialog.ui \

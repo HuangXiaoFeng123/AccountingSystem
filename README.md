@@ -1,5 +1,28 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.09
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231019
+*****************************************************************************
+9.Setting sum column read only and fix add button problem.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/AccountingSystem.pro
+        modified:   AccountingSystem/main.cpp
+        modified:   AccountingSystem/maindialog.cpp
+        modified:   AccountingSystem/maindialog.h
+        new file:   AccountingSystem/noedit.cpp
+        new file:   AccountingSystem/noedit.h
+
+*****************************************************************************
 Qt version  : 0.08
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
