@@ -1,5 +1,23 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.10
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231020
+*****************************************************************************
+10.Fixing calculate sum problem and add button problem.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/maindialog.cpp
+
+*****************************************************************************
 Qt version  : 0.09
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
