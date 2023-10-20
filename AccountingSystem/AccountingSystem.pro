@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,16 +12,19 @@ SOURCES += \
     logdialog.cpp \
     main.cpp \
     maindialog.cpp \
-    noedit.cpp
+    noedit.cpp \
+    sqlchart.cpp
 
 HEADERS += \
     logdialog.h \
     maindialog.h \
-    noedit.h
+    noedit.h \
+    sqlchart.h
 
 FORMS += \
     logdialog.ui \
-    maindialog.ui
+    maindialog.ui \
+    sqlchart.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

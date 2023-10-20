@@ -45,6 +45,7 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLineEdit *lineEdit;
     QPushButton *ButtonSearch;
+    QPushButton *ButtonNext;
 
     void setupUi(QWidget *MainDialog)
     {
@@ -168,7 +169,18 @@ public:
 
         horizontalLayout_3->addWidget(ButtonSearch);
 
-        horizontalLayout_3->setStretch(0, 4);
+        ButtonNext = new QPushButton(MainDialog);
+        ButtonNext->setObjectName(QString::fromUtf8("ButtonNext"));
+        ButtonNext->setMinimumSize(QSize(40, 40));
+        ButtonNext->setMaximumSize(QSize(40, 40));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
+        font1.setPointSize(8);
+        ButtonNext->setFont(font1);
+
+        horizontalLayout_3->addWidget(ButtonNext);
+
+        horizontalLayout_3->setStretch(0, 5);
         horizontalLayout_3->setStretch(1, 1);
 
         verticalLayout_2->addLayout(horizontalLayout_3);
@@ -194,6 +206,7 @@ public:
         ButtonCancel->setText(QApplication::translate("MainDialog", "\345\217\226\346\266\210", nullptr));
         lineEdit->setPlaceholderText(QApplication::translate("MainDialog", "\350\257\267\350\276\223\345\205\245\346\237\245\346\211\276\347\232\204\346\227\245\346\234\237", nullptr));
         ButtonSearch->setText(QApplication::translate("MainDialog", "\346\237\245\346\211\276", nullptr));
+        ButtonNext->setText(QApplication::translate("MainDialog", "-->", nullptr));
     } // retranslateUi
 
 };

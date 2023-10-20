@@ -4,7 +4,9 @@
 MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
-    setWindowTitle("Accounting System V0.10");
+    setWindowTitle("Accounting System V0.11");
+    setMinimumSize(800,600);
+    setMaximumSize(800,600);
     QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("../account.db");
     if(!db.open())
@@ -115,4 +117,10 @@ void MainDialog::on_ButtonSearch_clicked(void)
         model->setFilter(str);
     }
     model->select();
+}
+
+void MainDialog::on_ButtonNext_clicked(void)
+{
+    SqlChart *s=new SqlChart();
+    s->show();
 }

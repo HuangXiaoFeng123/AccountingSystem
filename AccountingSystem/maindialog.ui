@@ -169,7 +169,7 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="4,1">
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="5,1,0">
        <property name="topMargin">
         <number>0</number>
        </property>
@@ -205,6 +205,31 @@
          </property>
          <property name="text">
           <string>查找</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ButtonNext">
+         <property name="minimumSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>黑体</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>--&gt;</string>
          </property>
         </widget>
        </item>

@@ -6,6 +6,32 @@ Complie Ver: Qt 5.12.0
 CodeBase    : V0.01
 Build Date  : 20231020
 *****************************************************************************
+11.Adding BarChart function.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/AccountingSystem.pro
+        modified:   AccountingSystem/logdialog.cpp
+        modified:   AccountingSystem/main.cpp
+        modified:   AccountingSystem/maindialog.cpp
+        modified:   AccountingSystem/maindialog.h
+        modified:   AccountingSystem/maindialog.ui
+        new file:   AccountingSystem/sqlchart.cpp
+        new file:   AccountingSystem/sqlchart.h
+        new file:   AccountingSystem/sqlchart.ui
+
+*****************************************************************************
+Qt version  : 0.10
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231020
+*****************************************************************************
 10.Fixing calculate sum problem and add button problem.
 Label             : N/A
 Author            : HuangXiaoFeng

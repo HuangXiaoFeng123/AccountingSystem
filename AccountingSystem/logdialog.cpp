@@ -4,7 +4,9 @@
 LogDialog::LogDialog(QWidget *parent) :QDialog(parent),ui(new Ui::LogDialog)
 {
     ui->setupUi(this);
-    setWindowTitle("登陆");
+    setWindowTitle("Log In");
+    setMinimumSize(800,600);
+    setMaximumSize(800,600);
     //绘画头像
     ui->Piclabel->setScaledContents(true);
     ui->Piclabel->setPixmap(QPixmap(":/image/log_user.jpg"));

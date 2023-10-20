@@ -248,6 +248,7 @@ Makefile: ../AccountingSystem/AccountingSystem.pro D:/Qt_File/5.12.10/mingw73_64
 		D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/yacc.prf \
 		D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/lex.prf \
 		../AccountingSystem/AccountingSystem.pro \
+		D:/Qt_File/5.12.10/mingw73_64/lib/Qt5Charts.prl \
 		D:/Qt_File/5.12.10/mingw73_64/lib/Qt5Widgets.prl \
 		D:/Qt_File/5.12.10/mingw73_64/lib/Qt5Gui.prl \
 		D:/Qt_File/5.12.10/mingw73_64/lib/Qt5Sql.prl \
@@ -439,6 +440,7 @@ D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/exceptions.prf:
 D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/yacc.prf:
 D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/lex.prf:
 ../AccountingSystem/AccountingSystem.pro:
+D:/Qt_File/5.12.10/mingw73_64/lib/Qt5Charts.prl:
 D:/Qt_File/5.12.10/mingw73_64/lib/Qt5Widgets.prl:
 D:/Qt_File/5.12.10/mingw73_64/lib/Qt5Gui.prl:
 D:/Qt_File/5.12.10/mingw73_64/lib/Qt5Sql.prl:

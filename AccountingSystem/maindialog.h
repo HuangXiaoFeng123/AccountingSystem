@@ -13,6 +13,7 @@
 #include <QCloseEvent>
 #include <QTableWidgetItem>
 #include "noedit.h"
+#include "sqlchart.h"
 #include <QDebug>
 
 QT_BEGIN_NAMESPACE
@@ -40,6 +41,10 @@ private slots:
     void on_ButtonDel_clicked(void);
     void on_ButtonCancel_clicked(void);
     void on_ButtonSearch_clicked(void);
+    void on_ButtonNext_clicked(void);
+
+signals:
+    void changeWindow(void);
 
 private:
     Ui::MainDialog *ui;
