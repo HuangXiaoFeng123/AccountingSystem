@@ -4,9 +4,10 @@
 MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
-    setWindowTitle("Accounting System V0.13");
+    setWindowTitle("Accounting System V0.14");
     setMinimumSize(800,600);
     setMaximumSize(800,600);
+    this->move(500,400);
     QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("../account.db");
     if(!db.open())

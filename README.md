@@ -1,5 +1,26 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.13
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231023
+*****************************************************************************
+14.Optimized BarChart width and height.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/main.cpp
+        modified:   AccountingSystem/maindialog.cpp
+        modified:   AccountingSystem/sqlchart.cpp
+        modified:   AccountingSystem/sqlchart.ui
+
+*****************************************************************************
 Qt version  : 0.12
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0

@@ -56,11 +56,6 @@
            <string>近一年</string>
           </property>
          </item>
-         <item>
-          <property name="text">
-           <string>近三年</string>
-          </property>
-         </item>
         </widget>
        </item>
        <item>

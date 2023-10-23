@@ -5,7 +5,7 @@ SqlChart::SqlChart(QWidget *parent) :QWidget(parent),ui(new Ui::SqlChart)
 {
     ui->setupUi(this);
     setWindowTitle("Bar Chart");
-    this->move(1830,500);
+    this->move(1300,400);
 }
 
 SqlChart::~SqlChart(void)
@@ -111,14 +111,14 @@ int SqlChart::dateChoose(QString str)
     else if(str=="近半年")
     {
         index=5;
+        setMinimumSize(900,700);
+        setMaximumSize(900,700);
     }
     else if(str=="近一年")
     {
         index=11;
-    }
-    else if(str=="近三年")
-    {
-        index=35;
+        setMinimumSize(1500,1200);
+        setMaximumSize(1500,1200);
     }
     return index;
 }
