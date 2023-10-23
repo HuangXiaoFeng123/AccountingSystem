@@ -43,11 +43,9 @@ private slots:
     void on_ButtonSearch_clicked(void);
     void on_ButtonNext_clicked(void);
 
-signals:
-    void changeWindow(void);
-
 private:
     Ui::MainDialog *ui;
     QSqlTableModel *model;
+    SqlChart *s;
 };
 #endif // MAINDIALOG_H

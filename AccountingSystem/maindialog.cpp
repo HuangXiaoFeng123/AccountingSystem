@@ -4,7 +4,7 @@
 MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
-    setWindowTitle("Accounting System V0.11");
+    setWindowTitle("Accounting System V0.12");
     setMinimumSize(800,600);
     setMaximumSize(800,600);
     QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
@@ -24,11 +24,16 @@ MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
     model->setHeaderData(2,Qt::Horizontal,"支付宝账户");
     ReadOnlyDelegate* readOnlyDelegate = new ReadOnlyDelegate(this);
     ui->tableView->setItemDelegateForColumn(3, readOnlyDelegate); //设置某列只读
+    s=new SqlChart();
 }
 
 MainDialog::~MainDialog(void)
 {
     delete ui;
+    if(s!=NULL)
+    {
+        delete s;
+    }
 }
 
 void MainDialog::paintEvent(QPaintEvent *)
@@ -44,6 +49,10 @@ void MainDialog::closeEvent(QCloseEvent *e)
     int ret=msgBox.question(this,"close",tr("确定退出?"),QMessageBox::Ok|QMessageBox::Cancel);
     if(ret==QMessageBox::Ok)
     {
+        if(s->isVisible())
+        {
+            s->close();
+        }
         e->accept();
     }
     else
@@ -121,6 +130,6 @@ void MainDialog::on_ButtonSearch_clicked(void)
 
 void MainDialog::on_ButtonNext_clicked(void)
 {
-    SqlChart *s=new SqlChart();
+    s->drawBarChart();
     s->show();
 }

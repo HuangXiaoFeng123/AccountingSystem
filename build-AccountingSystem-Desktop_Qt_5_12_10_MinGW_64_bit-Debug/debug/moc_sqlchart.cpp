@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SqlChart_t {
-    QByteArrayData data[3];
-    char stringdata0[32];
+    QByteArrayData data[4];
+    char stringdata0[47];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,11 +32,13 @@ struct qt_meta_stringdata_SqlChart_t {
 static const qt_meta_stringdata_SqlChart_t qt_meta_stringdata_SqlChart = {
     {
 QT_MOC_LITERAL(0, 0, 8), // "SqlChart"
-QT_MOC_LITERAL(1, 9, 21), // "on_ButtonBack_clicked"
-QT_MOC_LITERAL(2, 31, 0) // ""
+QT_MOC_LITERAL(1, 9, 31), // "on_comboBox_currentIndexChanged"
+QT_MOC_LITERAL(2, 41, 0), // ""
+QT_MOC_LITERAL(3, 42, 4) // "arg1"
 
     },
-    "SqlChart\0on_ButtonBack_clicked\0"
+    "SqlChart\0on_comboBox_currentIndexChanged\0"
+    "\0arg1"
 };
 #undef QT_MOC_LITERAL
 
@@ -54,10 +56,10 @@ static const uint qt_meta_data_SqlChart[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x08 /* Private */,
+       1,    1,   19,    2, 0x08 /* Private */,
 
  // slots: parameters
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    3,
 
        0        // eod
 };
@@ -68,11 +70,10 @@ void SqlChart::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         auto *_t = static_cast<SqlChart *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_ButtonBack_clicked(); break;
+        case 0: _t->on_comboBox_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject SqlChart::staticMetaObject = { {

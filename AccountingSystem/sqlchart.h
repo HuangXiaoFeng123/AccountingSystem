@@ -6,6 +6,8 @@
 #include <QSqlQuery>
 #include <QPaintEvent>
 #include <QPainter>
+#include <QSqlError>
+#include <QCloseEvent>
 #include <QDebug>
 
 QT_CHARTS_USE_NAMESPACE
@@ -21,13 +23,21 @@ class SqlChart : public QWidget
 public:
     explicit SqlChart(QWidget *parent = nullptr);
     ~SqlChart(void);
+    void drawBarChart(void);
+    void cleanBarChart(void);
+
+protected:
     void paintEvent(QPaintEvent *);
+    void closeEvent(QCloseEvent *);
 
 private slots:
-    void on_ButtonBack_clicked(void);
+    void on_comboBox_currentIndexChanged(const QString &arg1);
 
 private:
     Ui::SqlChart *ui;
+    QBarSeries* series;
+    QValueAxis* axisY;
+    QBarCategoryAxis* axisX;
 };
 
 #endif // SQLCHART_H

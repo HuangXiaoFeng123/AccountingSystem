@@ -11,9 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -25,10 +25,10 @@ class Ui_SqlChart
 {
 public:
     QGridLayout *gridLayout;
-    QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
-    QPushButton *ButtonBack;
-    QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout;
+    QComboBox *comboBox;
+    QSpacerItem *horizontalSpacer;
     QChartView *chartView;
 
     void setupUi(QWidget *SqlChart)
@@ -38,43 +38,42 @@ public:
         SqlChart->resize(790, 597);
         gridLayout = new QGridLayout(SqlChart);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        ButtonBack = new QPushButton(SqlChart);
-        ButtonBack->setObjectName(QString::fromUtf8("ButtonBack"));
-        ButtonBack->setMinimumSize(QSize(40, 40));
-        ButtonBack->setMaximumSize(QSize(40, 40));
-        QFont font;
-        font.setFamily(QString::fromUtf8("\351\273\221\344\275\223"));
-        font.setPointSize(8);
-        ButtonBack->setFont(font);
-
-        verticalLayout->addWidget(ButtonBack);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
-        chartView = new QChartView(SqlChart);
-        chartView->setObjectName(QString::fromUtf8("chartView"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        comboBox = new QComboBox(SqlChart);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
+        comboBox->setSizePolicy(sizePolicy);
+        comboBox->setMinimumSize(QSize(140, 40));
+        comboBox->setMaximumSize(QSize(140, 40));
+        comboBox->setEditable(false);
+
+        horizontalLayout->addWidget(comboBox);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        chartView = new QChartView(SqlChart);
+        chartView->setObjectName(QString::fromUtf8("chartView"));
         sizePolicy.setHeightForWidth(chartView->sizePolicy().hasHeightForWidth());
         chartView->setSizePolicy(sizePolicy);
         chartView->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
         chartView->setSceneRect(QRectF(0, 0, 0, 0));
 
-        horizontalLayout->addWidget(chartView);
+        verticalLayout->addWidget(chartView);
 
-        horizontalLayout->setStretch(1, 10);
+        verticalLayout->setStretch(1, 9);
 
-        gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
+        gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
 
 
         retranslateUi(SqlChart);
@@ -85,7 +84,6 @@ public:
     void retranslateUi(QWidget *SqlChart)
     {
         SqlChart->setWindowTitle(QApplication::translate("SqlChart", "Form", nullptr));
-        ButtonBack->setText(QApplication::translate("SqlChart", "<--", nullptr));
     } // retranslateUi
 
 };

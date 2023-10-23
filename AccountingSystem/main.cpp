@@ -1,6 +1,5 @@
 #include "maindialog.h"
 #include "logdialog.h"
-#include "sqlchart.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
