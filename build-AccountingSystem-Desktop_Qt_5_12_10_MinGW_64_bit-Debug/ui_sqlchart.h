@@ -43,6 +43,10 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         comboBox = new QComboBox(SqlChart);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
@@ -84,6 +88,11 @@ public:
     void retranslateUi(QWidget *SqlChart)
     {
         SqlChart->setWindowTitle(QApplication::translate("SqlChart", "Form", nullptr));
+        comboBox->setItemText(0, QApplication::translate("SqlChart", "\350\277\221\344\270\211\346\234\210", nullptr));
+        comboBox->setItemText(1, QApplication::translate("SqlChart", "\350\277\221\345\215\212\345\271\264", nullptr));
+        comboBox->setItemText(2, QApplication::translate("SqlChart", "\350\277\221\344\270\200\345\271\264", nullptr));
+        comboBox->setItemText(3, QApplication::translate("SqlChart", "\350\277\221\344\270\211\345\271\264", nullptr));
+
     } // retranslateUi
 
 };

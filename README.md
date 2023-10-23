@@ -1,5 +1,28 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.12
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231023
+*****************************************************************************
+13.Adding date comboBox function in BarChart.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/main.cpp
+        modified:   AccountingSystem/maindialog.cpp
+        modified:   AccountingSystem/maindialog.h
+        modified:   AccountingSystem/sqlchart.cpp
+        modified:   AccountingSystem/sqlchart.h
+        modified:   AccountingSystem/sqlchart.ui
+
+*****************************************************************************
 Qt version  : 0.11
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0

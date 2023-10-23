@@ -4,7 +4,7 @@
 MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
-    setWindowTitle("Accounting System V0.12");
+    setWindowTitle("Accounting System V0.13");
     setMinimumSize(800,600);
     setMaximumSize(800,600);
     QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
@@ -25,6 +25,7 @@ MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
     ReadOnlyDelegate* readOnlyDelegate = new ReadOnlyDelegate(this);
     ui->tableView->setItemDelegateForColumn(3, readOnlyDelegate); //设置某列只读
     s=new SqlChart();
+    connect(s,&SqlChart::destroyed,this,&MainDialog::enableNextButtonSlot);
 }
 
 MainDialog::~MainDialog(void)
@@ -132,4 +133,10 @@ void MainDialog::on_ButtonNext_clicked(void)
 {
     s->drawBarChart();
     s->show();
+    ui->ButtonNext->setEnabled(false);
+}
+
+void MainDialog::enableNextButtonSlot(void)
+{
+    ui->ButtonNext->setEnabled(true);
 }

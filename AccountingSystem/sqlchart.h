@@ -25,6 +25,7 @@ public:
     ~SqlChart(void);
     void drawBarChart(void);
     void cleanBarChart(void);
+    int dateChoose(QString str);
 
 protected:
     void paintEvent(QPaintEvent *);
@@ -38,6 +39,7 @@ private:
     QBarSeries* series;
     QValueAxis* axisY;
     QBarCategoryAxis* axisX;
+    int index;
 };
 
 #endif // SQLCHART_H

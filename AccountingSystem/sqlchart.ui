@@ -41,6 +41,26 @@
          <property name="editable">
           <bool>false</bool>
          </property>
+         <item>
+          <property name="text">
+           <string>近三月</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>近半年</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>近一年</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>近三年</string>
+          </property>
+         </item>
         </widget>
        </item>
        <item>

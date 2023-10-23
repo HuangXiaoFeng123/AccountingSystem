@@ -30,10 +30,11 @@ class MainDialog : public QWidget
 public:
     MainDialog(QWidget *parent = nullptr);
     ~MainDialog(void);
+    void enableNextButtonSlot(void);
 
 protected:
     void paintEvent(QPaintEvent *);
-    void closeEvent(QCloseEvent *);
+    void closeEvent(QCloseEvent *);  
 
 private slots:
     void on_ButtonAdd_clicked(void);

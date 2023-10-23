@@ -6,9 +6,6 @@ SqlChart::SqlChart(QWidget *parent) :QWidget(parent),ui(new Ui::SqlChart)
     ui->setupUi(this);
     setWindowTitle("Bar Chart");
     this->move(1830,500);
-    QStringList dateList;
-    dateList<<"近三月"<<"近半年"<<"近一年"<<"近三年";
-    ui->comboBox->addItems(dateList);
 }
 
 SqlChart::~SqlChart(void)
@@ -26,6 +23,7 @@ void SqlChart::paintEvent(QPaintEvent *)
 void SqlChart::closeEvent(QCloseEvent *e)
 {
     this->cleanBarChart();
+    emit destroyed();
     e->accept();
 }
 
@@ -34,26 +32,38 @@ void SqlChart::drawBarChart(void)
     // QBarSet 类表示条形图中的一组条形
     QBarSet* set0 = new QBarSet("账户正收益");
     QBarSet* set1 = new QBarSet("账户负收益");
+    set0->setParent(this);
+    set1->setParent(this);
     set0->setColor(Qt::red);
     set1->setColor(Qt::green);
     QStringList categories;
-    QString sql=QString("select date,sum from account;");
+    QVector<float>temp_sum;
+    int index=dateChoose(ui->comboBox->currentText());
+    QString sql=QString("select date,sum from account order by date desc;");
     QSqlQuery query;
     query.exec(sql);
     // 为每一个条形添加数据
     while(query.next())
-    {
-        categories<<query.value("date").toString();
-        float temp_sum =query.value("sum").toFloat();
-        if(temp_sum<0)
+    {   
+        categories.push_front(query.value("date").toString());
+        temp_sum.push_front(query.value("sum").toFloat());
+        index--;
+        if(index==-1)
         {
-            *set1<<temp_sum;
-            *set0<<0;
+            break;
+        }
+    }
+    for(int i=0;i<temp_sum.size();i++)
+    {
+        if(temp_sum[i]<0)
+        {
+            set1->insert(i,temp_sum[i]);
+            set0->insert(i,0);
         }
         else
         {
-            *set0<<temp_sum;
-            *set1<<0;
+            set0->insert(i,temp_sum[i]);
+            set1->insert(i,0);
         }
     }
     // QBarSeries 类将一系列数据显示为按类别分组的垂直条。
@@ -92,22 +102,29 @@ void SqlChart::cleanBarChart(void)
     ui->chartView->chart()->removeAxis(axisY);
 }
 
+int SqlChart::dateChoose(QString str)
+{
+    if(str=="近三月")
+    {
+        index=2;
+    }
+    else if(str=="近半年")
+    {
+        index=5;
+    }
+    else if(str=="近一年")
+    {
+        index=11;
+    }
+    else if(str=="近三年")
+    {
+        index=35;
+    }
+    return index;
+}
+
 void SqlChart::on_comboBox_currentIndexChanged(const QString &arg1)
 {
-    if(arg1=="近三月")
-    {
-
-    }
-    else if(arg1=="近半年")
-    {
-
-    }
-    else if(arg1=="近一年")
-    {
-
-    }
-    else if(arg1=="近三年")
-    {
-
-    }
+    cleanBarChart();
+    drawBarChart();
 }
