@@ -1,10 +1,29 @@
 # AccountingSystem
 *****************************************************************************
-Qt version  : 0.13
+Qt version  : 0.15
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
 CodeBase    : V0.01
-Build Date  : 20231023
+Build Date  : 20231024
+*****************************************************************************
+15.Adding ico log in exe file.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/AccountingSystem.pro
+        modified:   AccountingSystem/maindialog.cpp
+
+*****************************************************************************
+Qt version  : 0.14
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231024
 *****************************************************************************
 14.Optimized BarChart width and height.
 Label             : N/A
@@ -21,7 +40,7 @@ RelatedFiles     :
         modified:   AccountingSystem/sqlchart.ui
 
 *****************************************************************************
-Qt version  : 0.12
+Qt version  : 0.13
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
 CodeBase    : V0.01
@@ -44,7 +63,7 @@ RelatedFiles     :
         modified:   AccountingSystem/sqlchart.ui
 
 *****************************************************************************
-Qt version  : 0.11
+Qt version  : 0.12
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
 CodeBase    : V0.01
@@ -67,7 +86,7 @@ RelatedFiles     :
         modified:   AccountingSystem/sqlchart.ui
 
 *****************************************************************************
-Qt version  : 0.10
+Qt version  : 0.11
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0
 CodeBase    : V0.01
