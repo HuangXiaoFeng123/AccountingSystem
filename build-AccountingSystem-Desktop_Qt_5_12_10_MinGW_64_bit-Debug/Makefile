@@ -224,7 +224,6 @@ Makefile: ../AccountingSystem/AccountingSystem.pro D:/Qt_File/5.12.10/mingw73_64
 		D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/qt_config.prf \
 		D:/Qt_File/5.12.10/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/toolchain.prf \
 		D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/default_pre.prf \
@@ -416,7 +415,6 @@ D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/qt_functions.prf:
 D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/qt_config.prf:
 D:/Qt_File/5.12.10/mingw73_64/mkspecs/win32-g++/qmake.conf:
 D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/exclusive_builds.prf:
 D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/toolchain.prf:
 D:/Qt_File/5.12.10/mingw73_64/mkspecs/features/default_pre.prf:

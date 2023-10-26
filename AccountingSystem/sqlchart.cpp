@@ -27,15 +27,14 @@ void SqlChart::closeEvent(QCloseEvent *e)
     e->accept();
 }
 
-void SqlChart::drawBarChart(void)
+QChart *SqlChart::drawBarChart(void)
 {
     // QBarSet 类表示条形图中的一组条形
     QBarSet* set0 = new QBarSet("账户正收益");
     QBarSet* set1 = new QBarSet("账户负收益");
     set0->setParent(this);
     set1->setParent(this);
-    set0->setColor(Qt::red);
-    set1->setColor(Qt::green);
+
     QStringList categories;
     QVector<float>temp_sum;
     int index=dateChoose(ui->comboBox->currentText());
@@ -76,6 +75,9 @@ void SqlChart::drawBarChart(void)
     chart->addSeries(series);                              // 将创建好的条形图series添加进chart中
     chart->setTitle("账户收益图");                           // 设置标题
     chart->setAnimationOptions(QChart::SeriesAnimations);  // 设置图表变化时的动画效果
+    chart->setTheme(QChart::ChartThemeBlueCerulean);       // 设置主题
+    set0->setColor(Qt::red);                               // 修改柱形图颜色
+    set1->setColor(Qt::green);
 
     sql=QString("select max(sum),min(sum) from account;");
     query.exec(sql);
@@ -93,6 +95,7 @@ void SqlChart::drawBarChart(void)
 
     chart->legend()->setVisible(true);                      // 设置图例是否可见
     chart->legend()->setAlignment(Qt::AlignBottom);         // 设置图例显示的位置
+    return chart;
 }
 
 void SqlChart::cleanBarChart(void)
