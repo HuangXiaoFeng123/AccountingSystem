@@ -27,7 +27,7 @@ void SqlChart::closeEvent(QCloseEvent *e)
     e->accept();
 }
 
-QChart *SqlChart::drawBarChart(void)
+void SqlChart::drawBarChart(void)
 {
     // QBarSet 类表示条形图中的一组条形
     QBarSet* set0 = new QBarSet("账户正收益");
@@ -95,7 +95,6 @@ QChart *SqlChart::drawBarChart(void)
 
     chart->legend()->setVisible(true);                      // 设置图例是否可见
     chart->legend()->setAlignment(Qt::AlignBottom);         // 设置图例显示的位置
-    return chart;
 }
 
 void SqlChart::cleanBarChart(void)
