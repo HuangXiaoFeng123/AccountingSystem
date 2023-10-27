@@ -37,6 +37,7 @@ private slots:
 private:
     Ui::SqlChart *ui;
     QBarSeries* series;
+    QLineSeries* seriesLine;
     QValueAxis* axisY;
     QBarCategoryAxis* axisX;
     int index;

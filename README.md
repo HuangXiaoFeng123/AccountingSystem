@@ -1,5 +1,25 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.18
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231027
+*****************************************************************************
+18.Adding LineSeries and fix widget size error when change date in BarChart.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/maindialog.cpp
+        modified:   AccountingSystem/sqlchart.cpp
+        modified:   AccountingSystem/sqlchart.h
+
+*****************************************************************************
 Qt version  : 0.17
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0

@@ -34,6 +34,8 @@ void SqlChart::drawBarChart(void)
     QBarSet* set1 = new QBarSet("账户负收益");
     set0->setParent(this);
     set1->setParent(this);
+    seriesLine=new QLineSeries(this);
+    seriesLine->setName("趋势线");
 
     QStringList categories;
     QVector<float>temp_sum;
@@ -64,6 +66,7 @@ void SqlChart::drawBarChart(void)
             set0->insert(i,temp_sum[i]);
             set1->insert(i,0);
         }
+        seriesLine->append(qreal(i),qreal(temp_sum[i]));
     }
     // QBarSeries 类将一系列数据显示为按类别分组的垂直条。
     series=new QBarSeries(this);
@@ -73,11 +76,13 @@ void SqlChart::drawBarChart(void)
     // QChart 类管理图表系列(series)、图例(legends)和轴(axes)。
     QChart* chart = ui->chartView->chart();                // 获取QChartView自带的chart
     chart->addSeries(series);                              // 将创建好的条形图series添加进chart中
+    chart->addSeries(seriesLine);
     chart->setTitle("账户收益图");                           // 设置标题
     chart->setAnimationOptions(QChart::SeriesAnimations);  // 设置图表变化时的动画效果
     chart->setTheme(QChart::ChartThemeBlueCerulean);       // 设置主题
     set0->setColor(Qt::red);                               // 修改柱形图颜色
     set1->setColor(Qt::green);
+    seriesLine->setColor(Qt::yellow);
 
     sql=QString("select max(sum),min(sum) from account;");
     query.exec(sql);
@@ -87,11 +92,13 @@ void SqlChart::drawBarChart(void)
     axisY->setRange(min, max);
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
+    seriesLine->attachAxis(axisY);
 
     axisX=new QBarCategoryAxis(this);
     axisX->append(categories);
     chart->addAxis(axisX, Qt::AlignBottom);
     series->attachAxis(axisX);                              // 将axis指定的轴附着到series
+    seriesLine->attachAxis(axisX);
 
     chart->legend()->setVisible(true);                      // 设置图例是否可见
     chart->legend()->setAlignment(Qt::AlignBottom);         // 设置图例显示的位置
@@ -109,6 +116,8 @@ int SqlChart::dateChoose(QString str)
     if(str=="近三月")
     {
         index=2;
+        setMinimumSize(800,600);
+        setMaximumSize(800,600);
     }
     else if(str=="近半年")
     {
