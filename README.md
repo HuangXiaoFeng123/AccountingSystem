@@ -1,5 +1,23 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.19
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231030
+*****************************************************************************
+19.Using model WA method to avoid datebase can't insert data in middle.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/maindialog.cpp
+
+*****************************************************************************
 Qt version  : 0.18
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0

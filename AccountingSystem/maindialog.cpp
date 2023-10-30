@@ -4,7 +4,7 @@
 MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
-    setWindowTitle("Accounting System V0.18");
+    setWindowTitle("Accounting System V0.19");
     setMinimumSize(800,600);
     setMaximumSize(800,600);
     this->move(500,400);
@@ -23,6 +23,7 @@ MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);  //手动提交模式
     model->setHeaderData(1,Qt::Horizontal,"中信账户");
     model->setHeaderData(2,Qt::Horizontal,"支付宝账户");
+    model->sort(0,Qt::AscendingOrder);
     ReadOnlyDelegate* readOnlyDelegate = new ReadOnlyDelegate(this);
     ui->tableView->setItemDelegateForColumn(3, readOnlyDelegate); //设置某列只读
     s=new SqlChart();
@@ -92,6 +93,7 @@ void MainDialog::on_ButtonSure_clicked(void)
         sql=QString("update account set sum=%1 where date='%2';").arg(sum[i]).arg(date.at(i));
         query.exec(sql);
     }
+    model->sort(0,Qt::AscendingOrder);       //按照日期升序
     model->select();
 }
 
