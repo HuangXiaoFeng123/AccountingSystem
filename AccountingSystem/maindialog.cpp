@@ -9,7 +9,7 @@ MainDialog::MainDialog(QWidget *parent): QWidget(parent), ui(new Ui::MainDialog)
     setMaximumSize(800,600);
     this->move(500,400);
     QSqlDatabase db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("../account.db");
+    db.setDatabaseName("./account.db");
     if(!db.open())
     {
         QMessageBox::warning(this,"warning",db.lastError().text());
@@ -75,23 +75,18 @@ void MainDialog::on_ButtonSure_clicked(void)
 {
     model->submitAll();
     QString sql=QString("select date,accountA,accountB from account;");
-    QSqlQuery query;
+    QSqlQuery query,query_update;
     query.exec(sql);
-    QStringList date;
-    float accountA,accountB;
-    QVector<float> sum;
-    int index;
-    for(index=0;query.next();index++)
+    QString date;
+    float accountA=0,accountB=0,sum=0;
+    for(int index=0;query.next();index++)
     {
-        date<<query.value("date").toString();
+        date=query.value("date").toString();
         accountA=query.value("accountA").toFloat();
         accountB=query.value("accountB").toFloat();
-        sum.append(accountA+accountB);
-    }
-    for(int i=0;i<index;i++)
-    {
-        sql=QString("update account set sum=%1 where date='%2';").arg(sum[i]).arg(date.at(i));
-        query.exec(sql);
+        sum=accountA+accountB;
+        QString sql_update=QString("update account set sum=%1 where date='%2';").arg(sum).arg(date);    //更新数据库数据
+        query_update.exec(sql_update);
     }
     model->sort(0,Qt::AscendingOrder);       //按照日期升序
     model->select();

@@ -1,9 +1,11 @@
+debug/changepasswork.o
 debug/logdialog.o
 debug/main.o
 debug/maindialog.o
 debug/noedit.o
 debug/sqlchart.o
 debug/qrc_Resources.o
+debug/moc_changepasswork.o
 debug/moc_logdialog.o
 debug/moc_maindialog.o
 debug/moc_noedit.o

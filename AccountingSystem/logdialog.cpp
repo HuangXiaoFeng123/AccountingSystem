@@ -13,7 +13,7 @@ LogDialog::LogDialog(QWidget *parent) :QDialog(parent),ui(new Ui::LogDialog)
     //密码格式
     ui->PassWordlineEdit->setEchoMode(QLineEdit::Password);
     //id文件读取
-    QFile file("../IDStringList.txt");
+    QFile file("./IDStringList.txt");
     bool openRead_OK=file.open(QIODevice::ReadOnly);
     if(openRead_OK==true)
     {
@@ -23,11 +23,17 @@ LogDialog::LogDialog(QWidget *parent) :QDialog(parent),ui(new Ui::LogDialog)
         ui->IDlineEdit->setCompleter(completer);
         file.close();
     }
+    //修改密码窗口
+    changePassWorkWin=new ChangePassWork;
 }
 
 LogDialog::~LogDialog(void)
 {
     delete ui;
+    if(changePassWorkWin!=NULL)
+    {
+        delete changePassWorkWin;
+    }
 }
 
 void LogDialog::paintEvent(QPaintEvent *)
@@ -40,10 +46,10 @@ void LogDialog::paintEvent(QPaintEvent *)
 
 void LogDialog::on_ButtonLog_clicked(void)
 {  
-    QFile file("../IDStringList.txt");
+    QFile file("./IDStringList.txt");
     bool openWrite_OK=file.open(QIODevice::WriteOnly);
     //登陆判断(目前只支持一个账号功能)
-    if((ui->IDlineEdit->text()==QString("123456"))&&(ui->PassWordlineEdit->text()==QString("666666")))
+    if((ui->IDlineEdit->text()==QString("123456"))&&(ui->PassWordlineEdit->text()==changePassWorkWin->oldPasswork))
     {
         if(openWrite_OK==true)
         {
@@ -58,9 +64,14 @@ void LogDialog::on_ButtonLog_clicked(void)
         {
             QMessageBox::warning(this,"warning","账号不存在");
         }
-        else if(ui->PassWordlineEdit->text()!=QString("666666"))
+        else if(ui->PassWordlineEdit->text()!=changePassWorkWin->oldPasswork)
         {
             QMessageBox::warning(this,"warning","密码错误");
         }
     }
+}
+
+void LogDialog::on_ButtonPassWork_clicked(void)
+{
+    changePassWorkWin->show();
 }

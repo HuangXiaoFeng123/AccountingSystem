@@ -1,5 +1,30 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.20
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231031
+*****************************************************************************
+20.Adding modify passwork function and optimizeing update databases code.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+	modified:   AccountingSystem/AccountingSystem.pro
+        new file:   AccountingSystem/changepasswork.cpp
+        new file:   AccountingSystem/changepasswork.h
+        new file:   AccountingSystem/changepasswork.ui
+        modified:   AccountingSystem/logdialog.cpp
+        modified:   AccountingSystem/logdialog.h
+        modified:   AccountingSystem/logdialog.ui
+        modified:   AccountingSystem/maindialog.cpp
+
+*****************************************************************************
 Qt version  : 0.19
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0

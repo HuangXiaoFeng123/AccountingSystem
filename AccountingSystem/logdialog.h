@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QCompleter>
 #include <QFile>
+#include "changepasswork.h"
 #include <QDebug>
 
 namespace Ui
@@ -27,10 +28,12 @@ protected:
 
 private slots:
     void on_ButtonLog_clicked(void);
+    void on_ButtonPassWork_clicked(void);
 
 private:
     Ui::LogDialog *ui;
     QStringList idList;
+    ChangePassWork *changePassWorkWin;
 };
 
 #endif // LOGDIALOG_H

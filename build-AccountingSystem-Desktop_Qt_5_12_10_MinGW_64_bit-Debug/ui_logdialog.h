@@ -35,10 +35,12 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
     QLineEdit *IDlineEdit;
+    QSpacerItem *horizontalSpacer_5;
     QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_3;
     QLineEdit *PassWordlineEdit;
+    QPushButton *ButtonPassWork;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
@@ -106,6 +108,10 @@ public:
 
         horizontalLayout_3->addWidget(IDlineEdit);
 
+        horizontalSpacer_5 = new QSpacerItem(120, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_5);
+
         horizontalLayout_3->setStretch(0, 1);
         horizontalLayout_3->setStretch(1, 4);
 
@@ -133,6 +139,21 @@ public:
         PassWordlineEdit->setSizePolicy(sizePolicy1);
 
         horizontalLayout_4->addWidget(PassWordlineEdit);
+
+        ButtonPassWork = new QPushButton(LogDialog);
+        ButtonPassWork->setObjectName(QString::fromUtf8("ButtonPassWork"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(ButtonPassWork->sizePolicy().hasHeightForWidth());
+        ButtonPassWork->setSizePolicy(sizePolicy2);
+        ButtonPassWork->setMinimumSize(QSize(120, 40));
+        ButtonPassWork->setMaximumSize(QSize(120, 40));
+        ButtonPassWork->setAutoFillBackground(false);
+        ButtonPassWork->setStyleSheet(QString::fromUtf8("background:transparent"));
+        ButtonPassWork->setFlat(true);
+
+        horizontalLayout_4->addWidget(ButtonPassWork);
 
         horizontalLayout_4->setStretch(0, 1);
         horizontalLayout_4->setStretch(1, 4);
@@ -192,6 +213,7 @@ public:
         Piclabel->setText(QApplication::translate("LogDialog", "TextLabel", nullptr));
         label_2->setText(QApplication::translate("LogDialog", "\350\264\246\345\217\267\357\274\232", nullptr));
         label_3->setText(QApplication::translate("LogDialog", "\345\257\206\347\240\201\357\274\232", nullptr));
+        ButtonPassWork->setText(QApplication::translate("LogDialog", "\344\277\256\346\224\271\345\257\206\347\240\201", nullptr));
         ButtonLog->setText(QApplication::translate("LogDialog", "\347\231\273\351\231\206", nullptr));
     } // retranslateUi
 

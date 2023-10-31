@@ -1,9 +1,11 @@
+release/changepasswork.o
 release/logdialog.o
 release/main.o
 release/maindialog.o
 release/noedit.o
 release/sqlchart.o
 release/qrc_Resources.o
+release/moc_changepasswork.o
 release/moc_logdialog.o
 release/moc_maindialog.o
 release/moc_noedit.o
