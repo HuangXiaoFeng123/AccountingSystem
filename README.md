@@ -1,5 +1,26 @@
 # AccountingSystem
 *****************************************************************************
+Qt version  : 0.21
+PlatForm    : Windows
+Complie Ver: Qt 5.12.0
+CodeBase    : V0.01
+Build Date  : 20231103
+*****************************************************************************
+21.Adding passwork eye function.
+Label             : N/A
+Author            : HuangXiaoFeng
+Issue number  	  : N/A
+Symptom           : N/A
+RootCause         : N/A
+Description       : N/A
+Solution          : N/A
+RelatedFiles     :
+        modified:   AccountingSystem/changepasswork.cpp
+        modified:   AccountingSystem/changepasswork.h
+        modified:   AccountingSystem/maindialog.cpp
+	modified:   AccountingSystem/maindialog.cpp
+
+*****************************************************************************
 Qt version  : 0.20
 PlatForm    : Windows
 Complie Ver: Qt 5.12.0

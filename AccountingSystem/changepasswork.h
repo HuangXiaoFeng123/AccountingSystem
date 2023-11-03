@@ -18,6 +18,9 @@ class ChangePassWork : public QWidget
 public:
     explicit ChangePassWork(QWidget *parent = nullptr);
     ~ChangePassWork(void);
+    void oldBtnPicSlot(void);
+    void newBtnPicSlot(void);
+    void repeatBtnPicSlot(void);
     QString oldPasswork;              //public 该变量目的是为了在logdialog类中可以使用
 
 protected:
@@ -30,6 +33,9 @@ private slots:
 private:
     Ui::ChangePassWork *ui;
     QFile file;
+    bool oldeye_icon_flag;
+    bool neweye_icon_flag;
+    bool repeateye_icon_flag;
 };
 
 #endif // CHANGEPASSWORK_H

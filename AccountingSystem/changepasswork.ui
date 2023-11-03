@@ -18,6 +18,9 @@
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>6</number>
+       </property>
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
@@ -30,8 +33,33 @@
          <property name="text">
           <string/>
          </property>
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ButtonOldeye">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background:transparent</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -64,8 +92,30 @@
          <property name="text">
           <string/>
          </property>
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ButtonNeweye">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background:transparent</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -98,8 +148,30 @@
          <property name="text">
           <string/>
          </property>
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ButtonRepeateye">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background:transparent</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
          </property>
         </widget>
        </item>

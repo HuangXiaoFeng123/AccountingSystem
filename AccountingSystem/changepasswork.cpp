@@ -22,11 +22,71 @@ ChangePassWork::ChangePassWork(QWidget *parent) :QWidget(parent),ui(new Ui::Chan
         oldPasswork=firstPassWork;
     }
     file.close();
+    oldeye_icon_flag=true;
+    neweye_icon_flag=true;
+    repeateye_icon_flag=true;
+    ui->ButtonOldeye->setIcon(QIcon(":/image/eye_close.jpg"));
+    ui->ButtonNeweye->setIcon(QIcon(":/image/eye_close.jpg"));
+    ui->ButtonRepeateye->setIcon(QIcon(":/image/eye_close.jpg"));
+    ui->OldlineEdit->setEchoMode(QLineEdit::Password);
+    ui->NewlineEdit->setEchoMode(QLineEdit::Password);
+    ui->RepeatlineEdit->setEchoMode(QLineEdit::Password);
+    connect(ui->ButtonOldeye,&QPushButton::clicked,this,&ChangePassWork::oldBtnPicSlot);
+    connect(ui->ButtonNeweye,&QPushButton::clicked,this,&ChangePassWork::newBtnPicSlot);
+    connect(ui->ButtonRepeateye,&QPushButton::clicked,this,&ChangePassWork::repeatBtnPicSlot);
 }
 
 ChangePassWork::~ChangePassWork(void)
 {
     delete ui;
+}
+
+void ChangePassWork::oldBtnPicSlot(void)
+{
+    if(oldeye_icon_flag==true)
+    {
+        oldeye_icon_flag=false;
+        ui->ButtonOldeye->setIcon(QIcon(":/image/eye_open.jpg"));
+        ui->OldlineEdit->setEchoMode(QLineEdit::Normal);
+    }
+    else
+    {
+        oldeye_icon_flag=true;
+        ui->ButtonOldeye->setIcon(QIcon(":/image/eye_close.jpg"));
+        ui->OldlineEdit->setEchoMode(QLineEdit::Password);
+    }
+}
+
+void ChangePassWork::newBtnPicSlot(void)
+{
+    if(neweye_icon_flag==true)
+    {
+        neweye_icon_flag=false;
+        ui->ButtonNeweye->setIcon(QIcon(":/image/eye_open.jpg"));
+        ui->NewlineEdit->setEchoMode(QLineEdit::Normal);
+    }
+    else
+    {
+        neweye_icon_flag=true;
+        ui->ButtonNeweye->setIcon(QIcon(":/image/eye_close.jpg"));
+        ui->NewlineEdit->setEchoMode(QLineEdit::Password);
+    }
+}
+
+void ChangePassWork::repeatBtnPicSlot(void)
+{
+    if(repeateye_icon_flag==true)
+    {
+        repeateye_icon_flag=false;
+        ui->ButtonRepeateye->setIcon(QIcon(":/image/eye_open.jpg"));
+        ui->RepeatlineEdit->setEchoMode(QLineEdit::Normal);
+    }
+    else
+    {
+        repeateye_icon_flag=true;
+        ui->ButtonRepeateye->setIcon(QIcon(":/image/eye_close.jpg"));
+        ui->RepeatlineEdit->setEchoMode(QLineEdit::Password);
+    }
 }
 
 void ChangePassWork::on_ButtonOK_clicked(void)

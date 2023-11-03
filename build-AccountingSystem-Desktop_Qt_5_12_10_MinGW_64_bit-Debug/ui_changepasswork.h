@@ -30,14 +30,17 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
     QLineEdit *OldlineEdit;
+    QPushButton *ButtonOldeye;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
     QLineEdit *NewlineEdit;
+    QPushButton *ButtonNeweye;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_3;
     QLineEdit *RepeatlineEdit;
+    QPushButton *ButtonRepeateye;
     QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_2;
@@ -56,6 +59,7 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label = new QLabel(ChangePassWork);
         label->setObjectName(QString::fromUtf8("label"));
@@ -64,9 +68,18 @@ public:
 
         OldlineEdit = new QLineEdit(ChangePassWork);
         OldlineEdit->setObjectName(QString::fromUtf8("OldlineEdit"));
-        OldlineEdit->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_2->addWidget(OldlineEdit);
+
+        ButtonOldeye = new QPushButton(ChangePassWork);
+        ButtonOldeye->setObjectName(QString::fromUtf8("ButtonOldeye"));
+        ButtonOldeye->setMinimumSize(QSize(30, 20));
+        ButtonOldeye->setMaximumSize(QSize(30, 20));
+        ButtonOldeye->setStyleSheet(QString::fromUtf8("background:transparent"));
+        ButtonOldeye->setCheckable(false);
+        ButtonOldeye->setFlat(true);
+
+        horizontalLayout_2->addWidget(ButtonOldeye);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
@@ -84,9 +97,17 @@ public:
 
         NewlineEdit = new QLineEdit(ChangePassWork);
         NewlineEdit->setObjectName(QString::fromUtf8("NewlineEdit"));
-        NewlineEdit->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_3->addWidget(NewlineEdit);
+
+        ButtonNeweye = new QPushButton(ChangePassWork);
+        ButtonNeweye->setObjectName(QString::fromUtf8("ButtonNeweye"));
+        ButtonNeweye->setMinimumSize(QSize(30, 20));
+        ButtonNeweye->setMaximumSize(QSize(30, 20));
+        ButtonNeweye->setStyleSheet(QString::fromUtf8("background:transparent"));
+        ButtonNeweye->setFlat(true);
+
+        horizontalLayout_3->addWidget(ButtonNeweye);
 
 
         verticalLayout->addLayout(horizontalLayout_3);
@@ -104,9 +125,17 @@ public:
 
         RepeatlineEdit = new QLineEdit(ChangePassWork);
         RepeatlineEdit->setObjectName(QString::fromUtf8("RepeatlineEdit"));
-        RepeatlineEdit->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_4->addWidget(RepeatlineEdit);
+
+        ButtonRepeateye = new QPushButton(ChangePassWork);
+        ButtonRepeateye->setObjectName(QString::fromUtf8("ButtonRepeateye"));
+        ButtonRepeateye->setMinimumSize(QSize(30, 20));
+        ButtonRepeateye->setMaximumSize(QSize(30, 20));
+        ButtonRepeateye->setStyleSheet(QString::fromUtf8("background:transparent"));
+        ButtonRepeateye->setFlat(true);
+
+        horizontalLayout_4->addWidget(ButtonRepeateye);
 
 
         verticalLayout->addLayout(horizontalLayout_4);
@@ -156,10 +185,13 @@ public:
         ChangePassWork->setWindowTitle(QApplication::translate("ChangePassWork", "Form", nullptr));
         label->setText(QApplication::translate("ChangePassWork", "\346\227\247\345\257\206\347\240\201", nullptr));
         OldlineEdit->setText(QString());
+        ButtonOldeye->setText(QString());
         label_2->setText(QApplication::translate("ChangePassWork", "\346\226\260\345\257\206\347\240\201", nullptr));
         NewlineEdit->setText(QString());
+        ButtonNeweye->setText(QString());
         label_3->setText(QApplication::translate("ChangePassWork", "\350\257\267\345\206\215\347\241\256\350\256\244", nullptr));
         RepeatlineEdit->setText(QString());
+        ButtonRepeateye->setText(QString());
         ButtonOK->setText(QApplication::translate("ChangePassWork", "\347\241\256\350\256\244", nullptr));
         ButtonNo->setText(QApplication::translate("ChangePassWork", "\345\217\226\346\266\210", nullptr));
     } // retranslateUi
